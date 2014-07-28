@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com.ustadmobile.cordovamediasanity" version="0.1">
+    <name>MediaSanity</name>
+    <description>Cordova Media Sanity Plugin - stops gesture required to play media</description>
+    <license>GPLv3</license>
+    <keywords>cordova,audio,video,autoplay</keywords>
+    
+    <js-module src="www/mediasanity.js" name="device">
+        <clobbers target="mediasanity" />
+    </js-module>
+    
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="MediaSanity">
+                <param name="android-package" value="com.ustadmobile.cordovamediasanity.CordovaMediaSanityPlugin"/>
+            </feature>
+        </config-file>
+        
+        <source-file src="platforms/android/src/com/ustadmobile/cordovamediasanity/CordovaMediaSanityPlugin.java" target-dir="src/com/ustadmobile/cordovamediasanity/" />
+        <source-file src="platforms/android/src/org/apache/cordova/CordovaMediaSanity.java" target-dir="src/org/apache/cordova/" />
+    </platform>
+</plugin>
+
