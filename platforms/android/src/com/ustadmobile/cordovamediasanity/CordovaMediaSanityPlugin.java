@@ -20,12 +20,7 @@ public class CordovaMediaSanityPlugin extends CordovaPlugin {
 			Activity activity = cordova.getActivity();
 			if(activity instanceof CordovaActivity) {
 				CordovaMediaSanity.setMediaGestureRequired(
-					(CordovaActivity)activity, mediaGestureRequired);
-				cordova.getActivity().runOnUiThread(new Runnable() {
-	                public void run() {
-	                	callbackContext.success();
-	                }
-				});
+					(CordovaActivity)activity, mediaGestureRequired, callbackContext);
 			}else {
 				callbackContext.error("MediaSanity: Failure! Activity not instanceof CordovaActivity!");
 			}
