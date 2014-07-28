@@ -1,6 +1,7 @@
 package org.apache.cordova;
 
 import android.webkit.WebSettings;
+import android.os.Build;
 
 /**
  * 
