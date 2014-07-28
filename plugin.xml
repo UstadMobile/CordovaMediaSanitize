@@ -6,8 +6,8 @@
     <license>GPLv3</license>
     <keywords>cordova,audio,video,autoplay</keywords>
     
-    <js-module src="www/mediasanity.js" name="device">
-        <clobbers target="mediasanity" />
+    <js-module src="www/mediasanity.js" name="MediaSanity">
+        <clobbers target="cordova.plugins.MediaSanity" />
     </js-module>
     
     <platform name="android">
