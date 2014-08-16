@@ -1,7 +1,7 @@
 #!/bin/bash
 
 WORKINGDIR=$(pwd)
-TARGETDIR=$WORKINGDIR/../../test-cordova-media-sanity
+TARGETDIR=$WORKINGDIR/../../CordovaMediaSanity-TestProject
 PLUGINDIR=$(pwd)/../
 
 if [ -e $TARGETDIR ]; then
@@ -14,14 +14,16 @@ fi
 
 
 cd $TARGETDIR
-cordova create testmediasanity com.ustadmobile.cordovamediasanity.CordovaMediaSanity testmediasanity
-cd testmediasanity
+cordova create CordovaMediaSanityTestProject com.ustadmobile.cordovamediasanity.CordovaMediaSanity CordovaMediaSanityTestProject
+cd CordovaMediaSanityTestProject
 cordova platform add android
 cordova plugin add $PLUGINDIR
 
 echo "Created cordova project in $(pwd)"
 
-#cp $PLUGINDIR/test/index.html $TARGETDIR/testhttp/www/index.html
+cp $PLUGINDIR/test/index.html $TARGETDIR/CordovaMediaSanityTestProject/www/index.html
+cp $PLUGINDIR/test/demo.js $TARGETDIR/CordovaMediaSanityTestProject/www/demo.js
+
 
 cd $WORKINGDIR
 

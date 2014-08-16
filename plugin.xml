@@ -19,6 +19,7 @@
         
         <source-file src="platforms/android/src/com/ustadmobile/cordovamediasanity/CordovaMediaSanityPlugin.java" target-dir="src/com/ustadmobile/cordovamediasanity/" />
         <source-file src="platforms/android/src/org/apache/cordova/CordovaMediaSanity.java" target-dir="src/org/apache/cordova/" />
+        <source-file src="platforms/android/src/com/wanikani/androidnotifier/TimerThreadsReaper.java" target-dir="src/com/wanikani/androidnotifier/" />
     </platform>
 </plugin>
 
